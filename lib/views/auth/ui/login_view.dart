@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
+import 'package:market_app/views/auth/ui/widgets/custom_arrow_botton.dart';
+import 'package:market_app/views/auth/ui/widgets/custom_text_button.dart';
+import 'package:market_app/views/auth/ui/widgets/custom_text_field.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -128,104 +131,8 @@ class LoginView extends StatelessWidget {
   }
 }
 
-class CustomArowButton extends StatelessWidget {
-  CustomArowButton({
-    super.key,required this.onTap,
-  });
-  final Function()?onTap;
 
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.kPrimaryColor,
-          foregroundColor: AppColors.kWhiteColor,
-        ),
-        onPressed: () {},
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-          child: Icon(Icons.arrow_forward, color: AppColors.kWhiteColor),
-        ));
-  }
-}
 
-class CustomTextButton extends StatelessWidget {
-  CustomTextButton({
-    super.key,
-    this.onTap,
-    required this.text,
-  });
 
-  final Function()? onTap;
-  final String text;
 
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: Text(
-        text,
-        style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 17.0,
-            color: AppColors.kPrimaryColor),
-      ),
-    );
-  }
-}
 
-class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({
-    super.key,
-    required this.labelText,
-    this.suffIcon,
-    this.prefIcon,
-    required this.isSecure,
-  });
-
-  final String labelText;
-  final Widget? suffIcon;
-  final Widget? prefIcon;
-  final bool isSecure;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      obscureText: isSecure,
-      obscuringCharacter: "*",
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return "This Field is Required";
-        }
-        return null;
-      },
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-        labelText: labelText,
-        suffixIcon: suffIcon,
-        prefixIcon: prefIcon,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(
-            color: AppColors.kBordersideColor,
-            width: 2.0,
-          ),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(
-            color: AppColors.kBordersideColor,
-            width: 2.0,
-          ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(
-            color: AppColors.kBordersideColor,
-            width: 2.0,
-          ),
-        ),
-      ),
-    );
-  }
-}
