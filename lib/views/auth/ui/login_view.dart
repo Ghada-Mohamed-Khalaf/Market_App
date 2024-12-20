@@ -51,19 +51,13 @@ class LoginView extends StatelessWidget {
                   SizedBox(
                     height: 20.0,
                   ),
-                  GestureDetector(onTap: (){},
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          "Forget Password?",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17.0,
-                              color: AppColors.kPrimaryColor),
-                        ),
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      CustomTextButton(text: "Forget Password?",
+                      onTap: (){},),
+
+                    ],
                   ),
                 ],
               ),
@@ -75,8 +69,30 @@ class LoginView extends StatelessWidget {
   }
 }
 
+class CustomTextButton extends StatelessWidget {
+  CustomTextButton({
+    super.key,this.onTap, required this.text,
+  });
+  final Function()?onTap;
+   final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: (){},
+      child: Text(
+        text,
+        style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 17.0,
+            color: AppColors.kPrimaryColor),
+      ),
+    );
+  }
+}
+
 class CustomTextFormField extends StatelessWidget {
-  CustomTextFormField({
+  const CustomTextFormField({
     super.key,
     required this.labelText,
     this.suffIcon,
