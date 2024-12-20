@@ -54,9 +54,53 @@ class LoginView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      CustomTextButton(text: "Forget Password?",
-                      onTap: (){},),
-
+                      CustomTextButton(
+                        text: "Forget Password?",
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Login",
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.kPrimaryColor,
+                            foregroundColor: AppColors.kWhiteColor,
+                          ),
+                          onPressed: () {},
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0,
+                              vertical: 10.0,
+                            ),
+                            child: Icon(
+                              Icons.arrow_forward,
+                              color: AppColors.kWhiteColor,
+                            ),
+                          ))
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Login With Google",
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                      CustomArowButton()
                     ],
                   ),
                 ],
@@ -69,17 +113,40 @@ class LoginView extends StatelessWidget {
   }
 }
 
+class CustomArowButton extends StatelessWidget {
+  const CustomArowButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.kPrimaryColor,
+          foregroundColor: AppColors.kWhiteColor,
+        ),
+        onPressed: () {},
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+          child: Icon(Icons.arrow_forward, color: AppColors.kWhiteColor),
+        ));
+  }
+}
+
 class CustomTextButton extends StatelessWidget {
   CustomTextButton({
-    super.key,this.onTap, required this.text,
+    super.key,
+    this.onTap,
+    required this.text,
   });
-  final Function()?onTap;
-   final String text;
+
+  final Function()? onTap;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Text(
         text,
         style: TextStyle(
