@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
 import 'package:market_app/views/auth/ui/forget_password_view.dart';
+import 'package:market_app/views/auth/ui/sign_up.dart';
 import 'package:market_app/views/auth/ui/widgets/custom_arrow_botton.dart';
 import 'package:market_app/views/auth/ui/widgets/custom_text_button.dart';
 import 'package:market_app/views/auth/ui/widgets/custom_text_field.dart';
@@ -38,6 +39,7 @@ class LoginView extends StatelessWidget {
                     CustomTextFormField(
                       isSecure: false,
                       labelText: "Email",
+                      keyboardType: TextInputType.emailAddress,
                       prefIcon: Icon(Icons.email),
                     ),
                     SizedBox(
@@ -45,6 +47,7 @@ class LoginView extends StatelessWidget {
                     ),
                     CustomTextFormField(
                       isSecure: true,
+                      keyboardType: TextInputType.visiblePassword,
                       suffIcon: IconButton(
                         onPressed: () {},
                         icon: Icon(
@@ -119,11 +122,16 @@ class LoginView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Already have an account?",style: TextStyle(
+                        Text("Don't have an account?",style: TextStyle(
                           fontWeight: FontWeight.bold,fontSize: 15.0,
                         ),),
                         SizedBox(width: 7,),
-                        CustomTextButton(text: "Sign up",onTap: (){},),
+                        CustomTextButton(text: "Sign up",onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return SignUp();
+                          }));
+
+                        },),
                       ],
                     )
                   ],

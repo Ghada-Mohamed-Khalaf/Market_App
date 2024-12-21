@@ -33,6 +33,7 @@ class ForgetPasswordView extends StatelessWidget {
                 children: [
                   CustomTextFormField(
                     isSecure: false,
+                    keyboardType: TextInputType.emailAddress,
                     labelText: "Email",
                     prefIcon: Icon(Icons.email),
                   ),
