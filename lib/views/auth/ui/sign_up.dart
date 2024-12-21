@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
-import 'package:market_app/views/auth/ui/forget_password_view.dart';
-import 'package:market_app/views/auth/ui/login_view.dart';
-import 'package:market_app/views/auth/ui/widgets/custom_arrow_botton.dart';
+
+import 'package:market_app/views/auth/ui/widgets/custom_arrow_button.dart';
 import 'package:market_app/views/auth/ui/widgets/custom_text_button.dart';
 import 'package:market_app/views/auth/ui/widgets/custom_text_field.dart';
+import 'package:market_app/views/nav_bar/ui/main_home_view.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -110,7 +110,9 @@ class SignUp extends StatelessWidget {
                                   fontSize: 20.0, fontWeight: FontWeight.bold),
                             ),
                             CustomArowButton(
-                              onTap: (){},
+                              onTap: (){
+
+                              },
                             )
                           ],
                         ),
