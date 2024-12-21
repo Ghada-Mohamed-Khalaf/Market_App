@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
+import 'package:market_app/views/auth/ui/forget_password_view.dart';
 import 'package:market_app/views/auth/ui/widgets/custom_arrow_botton.dart';
 import 'package:market_app/views/auth/ui/widgets/custom_text_button.dart';
 import 'package:market_app/views/auth/ui/widgets/custom_text_field.dart';
@@ -59,8 +60,13 @@ class LoginView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         CustomTextButton(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context){
+                              return ForgetPasswordView();
+                            }));
+                          },
                           text: "Forget Password?",
-                          onTap: () {},
+
                         ),
                       ],
                     ),
