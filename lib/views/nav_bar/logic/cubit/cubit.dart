@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:market_app/views/auth/ui/home_view.dart';
+import 'package:market_app/views/home/ui/home_view.dart';
 import 'package:market_app/views/favorite/ui/favorite_view.dart';
 import 'package:market_app/views/nav_bar/logic/cubit/state.dart';
 import 'package:market_app/views/profile/ui/profile_view.dart';
