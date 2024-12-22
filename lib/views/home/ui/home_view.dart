@@ -13,6 +13,8 @@ class HomeView extends StatelessWidget {
       child: ListView(
         children: [
           CustomSearchField(),
+          SizedBox(height: 20.0,),
+          Image.asset("assets/images/buy.jpg"),
         ],
       ),
     );
