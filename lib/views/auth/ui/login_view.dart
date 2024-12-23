@@ -100,7 +100,7 @@ class LoginView extends StatelessWidget {
                                 Icons.arrow_forward,
                                 color: AppColors.kWhiteColor,
                               ),
-                            ))
+                            ),),
                       ],
                     ),
                     SizedBox(

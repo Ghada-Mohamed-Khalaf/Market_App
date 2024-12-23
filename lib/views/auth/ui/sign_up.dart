@@ -85,7 +85,11 @@ class SignUp extends StatelessWidget {
                                   backgroundColor: AppColors.kPrimaryColor,
                                   foregroundColor: AppColors.kWhiteColor,
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return SignUp();
+                                  }));
+                                },
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                     horizontal: 10.0,
@@ -111,6 +115,7 @@ class SignUp extends StatelessWidget {
                             ),
                             CustomArowButton(
                               onTap: (){
+
 
                               },
                             )

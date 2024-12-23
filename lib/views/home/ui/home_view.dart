@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
-import 'package:market_app/core/components/Cusrom_search_field.dart';
+import 'package:market_app/core/components/Custom_search_field.dart';
 import 'package:market_app/views/home/ui/widget/categories_list.dart';
 
 class HomeView extends StatelessWidget {
@@ -107,6 +107,7 @@ class HomeView extends StatelessWidget {
                       ),
                       SizedBox(height: 10,),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             children: [
@@ -119,6 +120,8 @@ class HomeView extends StatelessWidget {
                                   color: AppColors.kGreyColor,
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold),),
+                              ElevatedButton(onPressed: (){}, child:Text("Buy Now"))
+                             
 
                             ],
                           ),
