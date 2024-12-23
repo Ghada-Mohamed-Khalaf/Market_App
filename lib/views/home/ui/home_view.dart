@@ -59,23 +59,74 @@ class HomeView extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                        child: Container(
-                          alignment: Alignment.center,
-                          height: 30,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: AppColors.kPrimaryColor,
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(16.0),
-                          bottomRight: Radius.circular(16.0),
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 30,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          color: AppColors.kPrimaryColor,
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(16.0),
+                            bottomRight: Radius.circular(16.0),
+                          ),
+                        ),
+                        child: Text(
+                          "10% OFF",
+                          style: TextStyle(
+                            color: AppColors.kWhiteColor,
+                          ),
                         ),
                       ),
-                          child: Text("10% OFF",style: TextStyle(
-                            color: AppColors.kWhiteColor,
-                          ),),
-                    )),
+                    ),
                   ],
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "product Name",
+                            style: TextStyle(
+                                color: AppColors.kBlackColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.favorite,
+                                color: AppColors.kGreyColor,
+                              ),),
+                        ],
+                      ),
+                      SizedBox(height: 10,),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Text("223LE", style: TextStyle(
+                                decoration: TextDecoration.lineThrough,
+                                  color: AppColors.kBlackColor,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),),
+                              Text("120LE", style: TextStyle(
+                                  color: AppColors.kGreyColor,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),),
+
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           )
