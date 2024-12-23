@@ -54,12 +54,7 @@ class HomeView extends StatelessWidget {
         topRight: Radius.circular(16.0),
         bottomRight: Radius.circular(16.0),
       ),
-      child:CachedNetworkImage(
-        imageUrl: "https://img.freepik.com/premium-psd/headset-product-social-media-post-banner-template_448714-340.jpg?ga=GA1.1.328080625.1734945837&semt=ais_hybrid",
-
-        placeholder: (context, url) => CircularProgressIndicator(),
-        errorWidget: (context, url, error) => Icon(Icons.error),
-      ),
+      child:CachedImage(),
         ),
 
 
@@ -142,6 +137,39 @@ class HomeView extends StatelessWidget {
     ],
     )
     ,
+    );
+  }
+}
+
+class CachedImage extends StatelessWidget {
+  const CachedImage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return CachedNetworkImage(
+      imageUrl: "https://img.freepik.com/premium-psd/headset-product-social-media-post-banner-template_448714-340.jpg?ga=GA1.1.328080625.1734945837&semt=ais_hybrid",
+
+      placeholder: (context, url) => SizedBox(
+        height: 200,
+          child: CustomCircleProgIndicator()),
+      errorWidget: (context, url, error) => Icon(Icons.error),
+    );
+  }
+}
+
+class CustomCircleProgIndicator extends StatelessWidget {
+  const CustomCircleProgIndicator({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: CircularProgressIndicator(
+        color: AppColors.kPrimaryColor,
+      ),
     );
   }
 }
