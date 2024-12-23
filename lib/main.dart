@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:market_app/views/auth/ui/forget_password_view.dart';
-import 'package:market_app/views/auth/ui/login_view.dart';
+import 'package:market_app/views/home/ui/home_view.dart';
+
 import 'package:market_app/views/nav_bar/ui/main_home_view.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Our Market',
       debugShowCheckedModeBanner: false,
-      home: MainHomeView(),
+      home:MainHomeView(),
     );
   }
 }

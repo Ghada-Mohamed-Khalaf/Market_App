@@ -13,9 +13,10 @@ class NavBarCubit extends Cubit<NavBarState>{
     return BlocProvider.of(context);
   }
   int currentIndex=0;
-  void  NavBarBottomNav(int index){
+ Future<dynamic> NavBarBottomNav(int index)async{
     currentIndex=index;
-   emit(NavBarBottomNav(index));
+
+   emit(NavBarBottomNav(index) as NavBarState);
   }
   List<Widget> views=[
     FavoriteView(),
