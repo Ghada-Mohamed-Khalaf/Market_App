@@ -60,6 +60,7 @@ class HomeView extends StatelessWidget {
                     ),
                     Positioned(
                         child: Container(
+                          alignment: Alignment.center,
                           height: 30,
                       width: 60,
                       decoration: BoxDecoration(
@@ -69,6 +70,9 @@ class HomeView extends StatelessWidget {
                           bottomRight: Radius.circular(16.0),
                         ),
                       ),
+                          child: Text("10% OFF",style: TextStyle(
+                            color: AppColors.kWhiteColor,
+                          ),),
                     )),
                   ],
                 ),
