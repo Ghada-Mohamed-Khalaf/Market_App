@@ -15,15 +15,35 @@ class ProfileView extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: [ CircleAvatar(
-                radius: 60,
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 55,
                 backgroundColor: AppColors.kPrimaryColor,
-                foregroundColor:AppColors.kWhiteColor ,
-              )
-
-              ],
-            ),
+                foregroundColor: AppColors.kWhiteColor,
+                child: Icon(
+                  Icons.person,
+                  size: 45,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "User Name",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text("User Email"),
+          SizedBox(
+            height: 10,),
+              Card()
+            ],
+          ),
         ),
       ),
     );
