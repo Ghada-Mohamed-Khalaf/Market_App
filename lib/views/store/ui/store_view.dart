@@ -6,7 +6,7 @@ class StoreView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("store"),
+      body: Text("Welcome To Our Market",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
     );
   }
 }
