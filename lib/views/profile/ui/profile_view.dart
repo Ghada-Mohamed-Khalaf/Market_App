@@ -41,7 +41,12 @@ class ProfileView extends StatelessWidget {
               Text("User Email"),
           SizedBox(
             height: 10,),
-              Card()
+              Card(color: AppColors.kPrimaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10),)
+                ),
+
+              )
             ],
           ),
         ),
