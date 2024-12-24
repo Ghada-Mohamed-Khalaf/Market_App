@@ -12,7 +12,8 @@ class CustomSearchField extends StatelessWidget {
       labelText: "Search in Market",
       isSecure: false,
       suffIcon:
-      ElevatedButton.icon(onPressed: () {}, label: Icon(Icons.search)),
+      ElevatedButton.icon(
+          onPressed: () {}, label: Icon(Icons.search,)),
     );
   }
 }

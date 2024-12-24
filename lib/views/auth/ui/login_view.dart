@@ -116,9 +116,9 @@ class LoginView extends StatelessWidget {
                         ),
                         CustomArowButton(
                               onTap: () {
-                           Navigator.push(context, MaterialPageRoute(builder: (context) {
-                                return MainHomeView();
-                                }));
+                           // Navigator.push(context, MaterialPageRoute(builder: (context) {
+                           //      return MainHomeView();
+                           //      }));
                                },
                           ),
                       ],
