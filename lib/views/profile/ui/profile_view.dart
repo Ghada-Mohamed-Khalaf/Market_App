@@ -43,7 +43,26 @@ class ProfileView extends StatelessWidget {
             height: 10,),
               Card(color: AppColors.kPrimaryColor,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10),)
+                  borderRadius: BorderRadius.all(Radius.circular(15),)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        Icons.person,
+                        color: AppColors.kWhiteColor,
+
+                      ),
+                      Text("Edit Name",style:TextStyle(color:
+                        AppColors.kWhiteColor
+                      ) ,),
+                      Icon(Icons.arrow_forward_ios,color: AppColors.kWhiteColor,),
+
+
+                    ],
+                  ),
                 ),
 
               )

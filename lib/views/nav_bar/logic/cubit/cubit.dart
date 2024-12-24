@@ -19,9 +19,9 @@ class NavBarCubit extends Cubit<NavBarState>{
    emit(NavBarBottomNav(index) as NavBarState);
   }
   List<Widget> views=[
-    HomeView(),
+   // HomeView(),
 
-    StoreView(),
+    //StoreView(),
     FavoriteView(),
 
     ProfileView(),
