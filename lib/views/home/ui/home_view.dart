@@ -39,6 +39,9 @@ class HomeView extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
+          Text("Recently Products",  style: TextStyle(
+            fontSize: 20,
+          ),),
           ProductCard()
         ],
       ),
