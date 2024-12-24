@@ -42,7 +42,13 @@ class HomeView extends StatelessWidget {
           Text("Recently Products",  style: TextStyle(
             fontSize: 20,
           ),),
-          ProductCard()
+          SizedBox(height: 15,),
+
+          ListView.builder(
+            itemCount: 10,
+              itemBuilder:(context,index) {
+            return ProductCard();
+          })
         ],
       ),
     );
