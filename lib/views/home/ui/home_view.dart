@@ -45,6 +45,8 @@ class HomeView extends StatelessWidget {
           SizedBox(height: 15,),
 
           ListView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
             itemCount: 10,
               itemBuilder:(context,index) {
             return ProductCard();
