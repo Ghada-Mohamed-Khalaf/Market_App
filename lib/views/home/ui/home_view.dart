@@ -4,6 +4,7 @@ import 'package:market_app/core/app_colors.dart';
 import 'package:market_app/core/components/Custom_search_field.dart';
 import 'package:market_app/core/components/cache_image.dart';
 import 'package:market_app/core/components/product_card.dart';
+import 'package:market_app/core/components/product_list.dart';
 import 'package:market_app/views/home/ui/widget/categories_list.dart';
 
 class HomeView extends StatelessWidget {
@@ -44,18 +45,14 @@ class HomeView extends StatelessWidget {
           ),),
           SizedBox(height: 15,),
 
-          ListView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: 10,
-              itemBuilder:(context,index) {
-            return ProductCard();
-          })
+          ProductList()
         ],
       ),
     );
   }
 }
+
+
 
 
 
