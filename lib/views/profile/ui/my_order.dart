@@ -8,7 +8,10 @@ class MyOrder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:buildAppBar(context),
+      appBar: buildAppBar(
+          context,
+
+          "My Order"),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ProductList(),

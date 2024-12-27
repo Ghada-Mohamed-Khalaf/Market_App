@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
 
-AppBar buildAppBar(BuildContext context) {
+AppBar buildAppBar(BuildContext context, String text) {
   return AppBar(
     backgroundColor: AppColors.kPrimaryColor,
     leading: IconButton(
