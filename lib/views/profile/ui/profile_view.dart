@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
 import 'package:market_app/views/profile/ui/edit_name_view.dart';
+import 'package:market_app/views/profile/ui/my_order.dart';
 import 'package:market_app/views/profile/ui/widgets/custom_row_btn.dart';
 
 class ProfileView extends StatelessWidget {
@@ -61,7 +62,14 @@ class ProfileView extends StatelessWidget {
                     ),
                     SizedBox(height: 10,),
                     CustomRowBtn(
-                      onTap: () {},
+                      onTap: () {
+    Navigator.push(context, MaterialPageRoute(builder: (context){
+
+    return MyOrder();
+
+    }));
+    },
+
                       icon: Icons.shopping_basket,
                       text: "My Orders",
                     ),
