@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
+import 'package:market_app/views/profile/ui/widgets/custom_row_btn.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -7,69 +8,70 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Card(
-        margin: EdgeInsets.all(24.0),
-        color: AppColors.kWhiteColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              CircleAvatar(
-                radius: 55,
-                backgroundColor: AppColors.kPrimaryColor,
-                foregroundColor: AppColors.kWhiteColor,
-                child: Icon(
-                  Icons.person,
-                  size: 45,
-                ),
+      body: Center(
+        child: SizedBox(
+          height: MediaQuery.sizeOf(context).height * .7,
+          child: SingleChildScrollView(
+            child: Card(
+              margin: EdgeInsets.all(24.0),
+              color: AppColors.kWhiteColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "User Name",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text("User Email"),
-          SizedBox(
-            height: 10,),
-              Card(color: AppColors.kPrimaryColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(15),)
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 55,
+                      backgroundColor: AppColors.kPrimaryColor,
+                      foregroundColor: AppColors.kWhiteColor,
+                      child: Icon(
                         Icons.person,
-                        color: AppColors.kWhiteColor,
-
+                        size: 45,
                       ),
-                      Text("Edit Name",style:TextStyle(color:
-                        AppColors.kWhiteColor
-                      ) ,),
-                      Icon(Icons.arrow_forward_ios,color: AppColors.kWhiteColor,),
-
-
-                    ],
-                  ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "User Name",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text("User Email"),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    CustomRowBtn(
+                      onTap: () {},
+                      icon: Icons.edit,
+                      text: "Edit Profile",
+                    ),
+                    SizedBox(height: 10,),
+                    CustomRowBtn(
+                      onTap: () {},
+                      icon: Icons.shopping_basket,
+                      text: "My Orders",
+                    ),
+                    SizedBox(height: 10,),
+                    CustomRowBtn(
+                      onTap: () {},
+                      icon: Icons.logout,
+                      text: "Logout",
+                    ),
+                  ],
                 ),
-
-              )
-            ],
+              ),
+            ),
           ),
         ),
       ),
     );
   }
 }
+

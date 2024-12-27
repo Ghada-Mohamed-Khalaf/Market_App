@@ -22,7 +22,7 @@ class NavBarCubit extends Cubit<NavBarState>{
    // HomeView(),
 
     //StoreView(),
-    FavoriteView(),
+//    FavoriteView(),
 
     ProfileView(),
 
