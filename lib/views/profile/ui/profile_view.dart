@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
+import 'package:market_app/views/profile/ui/edit_name_view.dart';
 import 'package:market_app/views/profile/ui/widgets/custom_row_btn.dart';
 
 class ProfileView extends StatelessWidget {
@@ -48,7 +49,13 @@ class ProfileView extends StatelessWidget {
                       height: 10,
                     ),
                     CustomRowBtn(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context){
+
+                          return EditNameView();
+
+                        }));
+                      },
                       icon: Icons.edit,
                       text: "Edit Profile",
                     ),
