@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/app_colors.dart';
+import 'package:market_app/core/function/build_app_bar.dart';
 import 'package:market_app/views/auth/ui/widgets/custom_text_field.dart';
 
 class EditNameView extends StatelessWidget {
@@ -47,25 +48,6 @@ class EditNameView extends StatelessWidget {
       ),
     );
   }
-
-  AppBar buildAppBar(BuildContext context) {
-    return AppBar(
-      backgroundColor: AppColors.kPrimaryColor,
-      leading: IconButton(
-        onPressed: () => Navigator.pop(context),
-        icon: Icon(
-          Icons.arrow_back_ios,
-          color: AppColors.kWhiteColor,
-        ),
-      ),
-      title: Text(
-        "Edit Name",
-        style: TextStyle(
-          color: AppColors.kWhiteColor,
-        ),
-
-      ),
-      centerTitle: true,
-    );
-  }
 }
+
+
