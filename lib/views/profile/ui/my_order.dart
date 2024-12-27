@@ -9,7 +9,10 @@ class MyOrder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:buildAppBar(context),
-      body: ProductList(),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ProductList(),
+      ),
     );
   }
 }
