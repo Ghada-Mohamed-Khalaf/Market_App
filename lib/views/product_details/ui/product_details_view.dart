@@ -15,6 +15,7 @@ class ProductDetailsView extends StatelessWidget {
             url:
                 "https://img.freepik.com/premium-psd/headset-product-social-media-post-banner-template_448714-340.jpg?ga=GA1.1.328080625.1734945837&semt=ais_hybrid",
           ),
+          SizedBox(height: 20,),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10,),
             child: Column(
