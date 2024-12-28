@@ -39,6 +39,8 @@ dependencies:
   cached_network_image: ^3.4.1
   supabase_flutter: ^2.8.2
 
+  flutter_rating: ^2.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
